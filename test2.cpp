@@ -1,26 +1,32 @@
 #include <iostream>
+#include <array>
 
 int main(){
 
-    int total_money;
-    int banknote_value;
-    int banknotes=0;
+    std::array<int, 5> data = {0,1,2,3,4};
 
-    std::cout << "Please introduce an amount of money" << std::endl;
-    std::cin >> total_money;
+    std::cout << "First array" << std::endl;
+    for(int i=0;i<5;i++)
+    std::cout << data[i] << std::endl;
 
-    std::cout << "Please introduce the value of banknote" << std::endl;
-    std::cin >> banknote_value;
+    std::array<int, 5> data2;
+    data2[0] = 0;
+    data2[1] = 1;
+    data2[2] = 2;
+    data2[3] = 3;
+    data2[4] = 4;
 
-    /*while(total_money >= banknote_value){
-        total_money -= banknote_value;
-        banknotes += 1;
-    }
-    */
+    std::cout << "Second array" << std::endl;
+    for(int i=0;i<5;i++)
+    std::cout << data2[i] << std::endl;
 
-    for (banknotes; total_money >= banknote_value; banknotes++)
-        total_money -= banknote_value;
+    std::array<int, 100> data3;
+    for(int i=0;i<100;i++)
+        data3[i] = i;
 
-    std::cout << "Number of banknotes: " << banknotes << std::endl;
+    std::cout << "Third array" << std::endl;
+    for(int i=0;i<100;i++)
+        std::cout << data3[i] << std::endl;
+
     return 0;
 }
