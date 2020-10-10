@@ -2,18 +2,19 @@
 
 int main(){
 
-    int variable; //empty variable to store input
+    float a,b,c;
+    float x;
 
-    std::cout << "Input a number" << std::endl;
+    std::cout << "Input A:" << std::endl;
+    std::cin >> a;
+    std::cout << "Input B:" << std::endl;
+    std::cin >> b;
+    std::cout << "Input C:" << std::endl;
+    std::cin >> c;
 
-    std::cin >> variable; //read input from cin and put it in variable
+    x=(c-b)/a;
 
-    std::cout << "Your number is: " << variable << std::endl; //print variable using cout
-
-    if(variable%2==0)
-        std::cout << "This number is even" << std::endl;
-    else
-        std::cout << "This number is odd" << std::endl;
+    std::cout << "The value of X is: " << x << std::endl;
 
     return 0;
 }
