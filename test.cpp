@@ -10,5 +10,10 @@ int main(){
 
     std::cout << "Your number is: " << variable << std::endl; //print variable using cout
 
+    if(variable%2==0)
+        std::cout << "This number is even" << std::endl;
+    else
+        std::cout << "This number is odd" << std::endl;
+
     return 0;
 }
