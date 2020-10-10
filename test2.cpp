@@ -3,13 +3,17 @@
 int main(){
 
     int total_money;
+    int banknote_value;
     int banknotes=0;
 
     std::cout << "Please introduce an amount of money" << std::endl;
     std::cin >> total_money;
 
-    while(total_money >= 50){
-        total_money -= 50;
+    std::cout << "Please introduce the value of banknote" << std::endl;
+    std::cin >> banknote_value;
+
+    while(total_money >= banknote_value){
+        total_money -= banknote_value;
         banknotes += 1;
     }
 
