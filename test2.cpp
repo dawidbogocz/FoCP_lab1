@@ -3,30 +3,16 @@
 
 int main(){
 
-    std::array<int, 5> data = {0,1,2,3,4};
+    std::array<int, 10> data = {5,1,2,6,4,0,8,7,9,3};
 
-    std::cout << "First array" << std::endl;
-    for(int i=0;i<5;i++)
-    std::cout << data[i] << std::endl;
+    int smallest = data[0];
 
-    std::array<int, 5> data2;
-    data2[0] = 0;
-    data2[1] = 1;
-    data2[2] = 2;
-    data2[3] = 3;
-    data2[4] = 4;
+    for(int i=0;i<10;i++)
+    {
+        if(data[i]<smallest)
+            smallest=data[i];
+    }
 
-    std::cout << "Second array" << std::endl;
-    for(int i=0;i<5;i++)
-    std::cout << data2[i] << std::endl;
-
-    std::array<int, 100> data3;
-    for(int i=0;i<100;i++)
-        data3[i] = i;
-
-    std::cout << "Third array" << std::endl;
-    for(int i=0;i<100;i++)
-        std::cout << data3[i] << std::endl;
-
+    std::cout << "Smallest number is: " << smallest << std::endl;
     return 0;
 }
