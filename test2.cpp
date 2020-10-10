@@ -12,10 +12,14 @@ int main(){
     std::cout << "Please introduce the value of banknote" << std::endl;
     std::cin >> banknote_value;
 
-    while(total_money >= banknote_value){
+    /*while(total_money >= banknote_value){
         total_money -= banknote_value;
         banknotes += 1;
     }
+    */
+
+    for (banknotes; total_money >= banknote_value; banknotes++)
+        total_money -= banknote_value;
 
     std::cout << "Number of banknotes: " << banknotes << std::endl;
     return 0;
